@@ -10,27 +10,28 @@ street = Enum('Baseline','Longsfield','Fallowfield','Claridge','Beatrice')
 
 
 class Address():
-    def __init__(self, First_names, Last_names, Street_numbers, Provinces, Citys, Postal_codes):
+    def __init__(self, First_names, Last_names, Streets, house_numbers, Provinces, Citys, Postal_codes):
       self.First_names = First_names
       self.Last_names = Last_names 
-      self.Street_numbers = Street_numbers
+      self.Streets = Streets
       self.Provinces = Provinces
       self.Citys = Citys
       self.Postal_codes = Postal_codes
+      self.house_number = house_number
 
 
 First_name = raw_input("Type in your first name :")
 Last_name = raw_input('Type in your last name: ')
 Street = raw_input('Type in your street: ')
 while Street not in street:
-   print(Street + 'is not a name of a street in ypur province:')
+   print(Street + ' is not a name of a street in your province:')
    Street = raw_input('Type in a valid street: ')
 else:
    pass
 house_number = raw_input('Type in the number of the house: ')
 Province = raw_input('Type in the abbreviation of your province: ')
 while Province not in province:
-   print(Province + 'is not a province in Canada')
+   print(Province + ' is not a province in Canada')
    Province = raw_input('Type in your province: ')
 else:
    pass
@@ -38,10 +39,10 @@ City = raw_input('Type in your city : ')
 Postal_code = raw_input('Type in your postal code: ')
 
 
-Details = Address(First_name, Last_name, Street_number, Province, City, Postal_code)
+Details = Address(First_name, Last_name, Street, house_number, Province, City, Postal_code)
 print(Details.First_names + ' ' + Details.Last_names)
-print(Details.Street_numbers + ' ' + Details.Provinces + ' ' + Details.Citys)
-print(Details.Postal_codes)
+print(Details.house_numbers + ' ' + Details.Streets)
+print(Details.Postal_codes + ' ' + Details.Citys + ' ' + Details.Provinces)
 
 
 
