@@ -17,7 +17,7 @@ class Address():
       self.Provinces = Provinces
       self.Citys = Citys
       self.Postal_codes = Postal_codes
-      self.house_number = house_number
+      self.house_numbers = house_numbers
 
 
 First_name = raw_input("Type in your first name :")
